@@ -1,0 +1,337 @@
+.carsPage {
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.heroSection {
+    padding: 160px 0 100px;
+    position: relative;
+    text-align: center;
+}
+
+.heroGlow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.badge {
+    color: #d97706;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.heroTitle {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+    color: #0f172a;
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroDesc {
+    color: #475569;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.breadcrumb a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #0f172a;
+}
+
+/* Category Filter Section */
+.filterSection {
+    padding: 40px 0;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titleArea h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.titleArea p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.categoryGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.categoryCard {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    padding: 12px 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.categoryIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d97706;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.categoryCard span {
+    font-weight: 700;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.categoryCard:hover {
+    border-color: #f59e0b;
+    transform: translateY(-3px);
+}
+
+.activeCategory {
+    background: #ffffff;
+    border-color: #f59e0b;
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.1);
+}
+
+.activeCategory .categoryIcon {
+    background: #f59e0b;
+    color: white;
+}
+
+.activeCategory span {
+    color: #0f172a;
+}
+
+/* Inventory Section */
+.inventorySection {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.inventoryControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .inventoryControls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.inventoryMeta h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.countBadge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: #d97706;
+    font-weight: 700;
+}
+
+.searchWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.searchWrapper i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d97706;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 16px 20px 16px 55px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    color: #0f172a;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.searchInput:focus {
+    border-color: #f59e0b;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+}
+
+/* Car Grid */
+.carGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* States */
+.errorCard {
+    text-align: center;
+    padding: 60px;
+    background: rgba(239, 68, 68, 0.05);
+    border-radius: 32px;
+    border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.errorCard i {
+    font-size: 3rem;
+    color: #ef4444;
+    margin-bottom: 20px;
+}
+
+.retryBtn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.emptyContainer {
+    grid-column: 1 / -1;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.emptyContent {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.emptyIconArea {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #f59e0b;
+}
+
+.radarPulse {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #f59e0b;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.emptyContent h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.emptyContent p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.resetBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.resetBtn:hover {
+    background: #ffffff;
+    border-color: #f59e0b;
+}

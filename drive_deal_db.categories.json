@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "69f486cd6356aa5bc3c08dde"
+  },
+  "name": "SUV",
+  "photo": "/categoryPic/suv.png",
+  "createdAt": {
+    "$date": "2026-05-01T10:56:13.206Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T10:56:13.206Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f486e76356aa5bc3c08ddf"
+  },
+  "name": "Sedan",
+  "photo": "/categoryPic/sedan.png",
+  "createdAt": {
+    "$date": "2026-05-01T10:56:39.771Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T10:56:39.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f487046356aa5bc3c08de0"
+  },
+  "name": "Hatchback",
+  "photo": "/categoryPic/hatchback.png",
+  "createdAt": {
+    "$date": "2026-05-01T10:57:08.246Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-01T10:57:08.246Z"
+  },
+  "__v": 0
+}]

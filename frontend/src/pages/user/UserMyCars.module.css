@@ -1,0 +1,858 @@
+.pageWrapper {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding: 60px 0 120px;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Section */
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.pageTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -2.5px;
+    color: #0f172a;
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headerBadge {
+    background: #ffffff;
+    color: #f59e0b;
+    padding: 12px 28px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+/* Premium Card Recreation */
+.card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+    border-color: #f59e0b;
+}
+
+.imageWrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .image {
+    transform: scale(1.1);
+}
+
+.cardOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent, rgba(0,0,0,0.4));
+    z-index: 1;
+}
+
+.statusBadge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    z-index: 10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.statusPending { background: rgba(245, 158, 11, 0.9); color: white; }
+.statusApproved { background: rgba(16, 185, 129, 0.9); color: white; }
+.statusCancelled { background: rgba(239, 68, 68, 0.9); color: white; }
+.statusCompleted { background: rgba(99, 102, 241, 0.9); color: white; }
+
+.infoBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: none;
+    border-radius: 16px;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.infoBtn:hover {
+    background: #f59e0b;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Card Body */
+.content {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.carInfo {
+    margin-bottom: 0.75rem;
+}
+
+.carBrand {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.carName {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.dealStats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.statItem label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.statItem span {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #0f172a;
+}
+
+.priceHighlight {
+    color: #f59e0b !important;
+}
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.actionBtn {
+    flex: 1;
+    padding: 0.85rem;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.primaryBtn {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
+}
+
+.primaryBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(245, 158, 11, 0.3);
+}
+
+.secondaryBtn {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.secondaryBtn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Empty State */
+.emptyState {
+    text-align: center;
+    padding: 150px 0;
+    grid-column: 1 / -1;
+}
+
+.emptyIcon {
+    width: 120px;
+    height: 120px;
+    background: #fffbeb;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #f59e0b;
+    margin: 0 auto 3rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Modern Offcanvas Detail View */
+.offcanvasOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(12px);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlayVisible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.offcanvas {
+    position: fixed;
+    top: 20px;
+    right: -100%;
+    bottom: 20px;
+    width: 600px;
+    background: #ffffff;
+    z-index: 2001;
+    border-radius: 40px 0 0 40px;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.offcanvasOpen {
+    right: 0;
+}
+
+.offcanvasContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.offHeader {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.offTitle h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+    letter-spacing: -1px;
+}
+
+.offTitle p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #94a3b8;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.offClose {
+    width: 56px;
+    height: 56px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.offClose:hover {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+    transform: rotate(90deg);
+}
+
+.offBody {
+    padding: 40px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.offImageCard {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.offImageCard img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.priceFloating {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background: #f59e0b;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 100px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+.specGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.specItem {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.specIcon {
+    width: 52px;
+    height: 52px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #f59e0b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.specText label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.specText span {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #0f172a;
+}
+
+.additionalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infoBlock {
+    background: #0f172a;
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: white;
+}
+
+.infoBlock i {
+    font-size: 1.5rem;
+    color: #f59e0b;
+}
+
+.infoBlock label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+
+.infoBlock p {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Modal Overhaul */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modalContainer {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 48px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+    animation: modalScale 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalScale {
+    from { opacity: 0; transform: scale(0.9) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modalHeader {
+    padding: 40px 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalHeader h3 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.modalClose {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.modalBody {
+    padding: 0 40px 40px;
+}
+
+.ratingBox {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.starBtn {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.starBtnActive {
+    color: #f59e0b;
+    transform: scale(1.1);
+}
+
+.textarea {
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 24px;
+    padding: 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #f59e0b;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submitBtn:hover {
+    background: #1e293b;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sellerBtn {
+    background: #ffffff;
+    color: #6366f1;
+    border: 1px solid #e0e7ff;
+}
+
+.sellerBtn:hover {
+    background: #eef2ff;
+    border-color: #6366f1;
+    color: #4338ca;
+}
+
+/* Tracking Section */
+.trackingSection {
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    background: #fdfdfd;
+    border-radius: 20px;
+    border: 1px dashed #e2e8f0;
+}
+
+.sectionLabel {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.tracker {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10px;
+}
+
+.trackerPoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+    flex: 1;
+}
+
+.pointIcon {
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    border: 2px solid #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #cbd5e1;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.trackerPoint span {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.pointActive .pointIcon {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    color: white;
+    box-shadow: 0 10px 15px rgba(245, 158, 11, 0.3);
+}
+
+.pointActive span {
+    color: #0f172a;
+}
+
+.trackerLine {
+    flex: 1;
+    height: 2px;
+    background: #f1f5f9;
+    margin-top: 18px;
+    position: relative;
+}
+
+.lineFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #f59e0b;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fillActive {
+    width: 100%;
+}
+
+/* Seller Hero in Offcanvas */
+.sellerHero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sellerAvatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid #f8fafc;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.sellerAvatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sellerName {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.sellerLocation {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.sellerLocation i {
+    color: #f59e0b;
+    margin-right: 6px;
+}
+
+/* Contact Grid */
+.contactGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.contactCard {
+    background: #f8fafc;
+    padding: 20px 24px;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s;
+}
+
+.contactCard:hover {
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: #6366f1;
+}
+
+.contactIcon {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #6366f1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contactText {
+    flex: 1;
+}
+
+.contactText label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.contactText span {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.contactAction {
+    width: 40px;
+    height: 40px;
+    background: #6366f1;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contactAction:hover {
+    background: #4338ca;
+    transform: scale(1.1);
+}
+
+/* Seller Badges */
+.sellerBadges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.badgeItem {
+    background: #fdfdfd;
+    border: 1px solid #f1f5f9;
+    padding: 16px 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.badgeItem i {
+    font-size: 1.5rem;
+    color: #10b981;
+}
+
+.badgeItem span {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #475569;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .pageTitle { font-size: 2.75rem; }
+    .grid { grid-template-columns: 1fr; }
+    .pageHeader { flex-direction: column; gap: 2rem; align-items: flex-start; }
+    .offcanvas { width: 100%; border-radius: 0; top: 0; bottom: 0; }
+    .trackerPoint span { font-size: 0.6rem; }
+    .sellerBadges { grid-template-columns: 1fr; }
+}

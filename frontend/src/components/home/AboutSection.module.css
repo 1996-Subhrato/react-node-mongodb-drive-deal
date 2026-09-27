@@ -1,0 +1,255 @@
+.section {
+  background: #ffffff;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subTitle {
+  color: #d97706;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1.5px;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headerDesc {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.modelGrid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pathCard {
+  background: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #f1f5f9;
+  padding: 3.5rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pathCard:hover {
+  transform: translateY(-10px);
+  border-color: #f59e0b;
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.iconBox {
+  width: 64px;
+  height: 64px;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  font-size: 1.5rem;
+}
+
+.headerText h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.headerText p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.stepItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.stepNum {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #d97706;
+  background: rgba(245, 158, 11, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepContent h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.stepContent p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cardFooter {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.statMini {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statVal {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #22c55e;
+}
+
+/* Connection Visual */
+.connectorArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.pulseLine {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #f59e0b, transparent);
+  animation: pulseVertical 3s infinite;
+}
+
+@keyframes pulseVertical {
+  0% { transform: scaleY(0); opacity: 0; }
+  50% { transform: scaleY(1); opacity: 0.5; }
+  100% { transform: scaleY(0); opacity: 0; }
+}
+
+.centerLogo {
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.1);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.logoText {
+  font-size: 12px;
+}
+
+.centerLogo img {
+  width: 50px;
+  height: auto;
+}
+
+/* User Card Specifics */
+.userCard .iconBox {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.userCard .stepNum {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.userCard .statVal {
+  color: #f59e0b;
+}
+
+@media (max-width: 1200px) {
+  .modelGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .connectorArea {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.75rem; }
+  .pathCard { padding: 2.5rem; }
+}

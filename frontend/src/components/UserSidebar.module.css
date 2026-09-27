@@ -1,0 +1,121 @@
+.sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e8f0;
+  z-index: 1000;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.02);
+}
+
+.logo {
+  margin-bottom: 3.5rem;
+  padding: 0 0.75rem;
+  text-align: center;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.nav::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menuLink i {
+  width: 24px;
+  margin-right: 14px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.menuLink:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+  transform: translateX(5px);
+}
+
+.activeLink {
+  background-color: #fffbeb !important;
+  color: #f59e0b !important;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+}
+
+.activeLink i {
+  opacity: 1;
+  color: #f59e0b;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.logoutBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  color: #f87171;
+  background: transparent;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #fef2f2;
+  border-color: #fee2e2;
+  transform: translateX(5px);
+}
+
+.logoutBtn i {
+  margin-right: 14px;
+  font-size: 1.2rem;
+}
